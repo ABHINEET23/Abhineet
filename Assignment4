@@ -1,0 +1,42 @@
+interface Shape
+{    
+   double pi = 3.14159265359;    
+   double Area(double a, double b);    
+}
+class Rectangle implements Shape    
+{    
+   public double Area(double a, double b)    
+   {    
+      return(a * b);    
+   }
+}
+class Sphere implements Shape    
+{    
+   public double Area(double a, double b)    
+   {    
+      return(4 * pi * a * a);    
+   }    
+}
+class Cone implements Shape    
+{    
+   public double Area(double a, double b)    
+   {    
+      return(pi * a *( a + b));    
+   }    
+}
+public class ShapeUsingInterface 
+{
+   public static void main(String[] args) 
+   {
+      Rectangle rect = new Rectangle();    
+      Sphere cir = new Sphere();   
+      Cone co = new Cone();	  
+      Shape a1;
+      a1 = rect;    
+      System.out.println("Area of rectangle is: " + a1.Area(50, 30));      
+      a1 = cir;    
+      System.out.println("Area of Sphere is: " + a1.Area(10, 10));
+	  a1 = co;
+	  System.out.println("Area of Cone is: " + a1.Area(15, 10));
+   }
+}
