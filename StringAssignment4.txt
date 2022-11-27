@@ -1,0 +1,10 @@
+public class Main {
+   public static void main(String[] args) {
+      String string = "@Know$ 123##Pr%ogram*";
+      System.out.println("Actual String = " + string);
+
+      string = string.replaceAll("[^a-zA-Z]", "");
+      string = string.replaceAll("[0123456789]", "");
+      System.out.println("String after replacement = " + string);
+   }
+}
